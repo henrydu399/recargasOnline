@@ -1,0 +1,48 @@
+@startuml
+enum co.systemhome.recargasonline.enums.ErrorGeneric
+interface co.systemhome.recargasonline.business.IRecargasBusiness
+interface co.systemhome.recargasonline.repository.RecargasOperadorRepository
+interface co.systemhome.recargasonline.repository.RecargasRepository
+
+
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> org.springframework.stereotype.Service
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.system.out.jusgadoapi.util.GSonUtils
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.systemhome.recargasonline.dto.RecargaDTO
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.systemhome.recargasonline.dto.RecargasOperadorDto
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.systemhome.recargasonline.model.Recargas
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.systemhome.recargasonline.model.RecargasOperador
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.systemhome.recargasonline.validation.RecargaValidation
+
+co.systemhome.recargasonline.business.RecargasBusinessImpl --|> co.systemhome.recargasonline.business.IRecargasBusiness
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.systemhome.recargasonline.repository.RecargasOperadorRepository
+co.systemhome.recargasonline.business.RecargasBusinessImpl ..> co.systemhome.recargasonline.repository.RecargasRepository
+
+co.systemhome.recargasonline.controllers.RecargasController ..> co.systemhome.recargasonline.dto.RecargaDTO
+co.systemhome.recargasonline.controllers.RecargasController ..> co.systemhome.recargasonline.dto.RecargasOperadorDto
+co.systemhome.recargasonline.controllers.RecargasController ..> co.systemhome.recargasonline.model.Recargas
+co.systemhome.recargasonline.controllers.RecargasController ..> co.systemhome.recargasonline.validation.RecargaValidation
+
+
+co.systemhome.recargasonline.controllers.RecargasController ..> co.systemhome.recargasonline.business.IRecargasBusiness
+
+
+
+
+co.systemhome.recargasonline.dto.RecargasOperadorDto ..> co.systemhome.recargasonline.model.RecargasOperador
+
+
+co.systemhome.recargasonline.validation.RecargaValidation ..> co.systemhome.recargasonline.dto.Operador
+co.systemhome.recargasonline.validation.RecargaValidation ..> co.systemhome.recargasonline.dto.RecargaDTO
+co.systemhome.recargasonline.validation.RecargaValidation ..> co.systemhome.recargasonline.model.Recargas
+co.systemhome.recargasonline.validation.RecargaValidation ..> co.systemhome.recargasonline.enums.ErrorGeneric
+
+co.systemhome.recargasonline.business.IRecargasBusiness ..> co.systemhome.recargasonline.dto.RecargaDTO
+co.systemhome.recargasonline.business.IRecargasBusiness ..> co.systemhome.recargasonline.dto.RecargasOperadorDto
+co.systemhome.recargasonline.business.IRecargasBusiness ..> co.systemhome.recargasonline.model.Recargas
+
+co.systemhome.recargasonline.repository.RecargasOperadorRepository ..> co.systemhome.recargasonline.model.RecargasOperador
+
+
+co.systemhome.recargasonline.repository.RecargasRepository ..> co.systemhome.recargasonline.model.Recargas
+
+@enduml

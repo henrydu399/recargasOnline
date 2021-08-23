@@ -1,0 +1,39 @@
+        <div class="table-responsive">
+                <table  conditional="$ctrl.foo"  class="table table-dark table-striped" st-safe-src="$ctrl.listPedidosSafe" st-table="$ctrl.listPedidos">
+                <thead >
+                    <tr>
+                        <th st-sort="ppFechaCreacion">FECHA</th>
+                        <th st-sort="ppCantidad">CANTIDAD</th>
+                        <th st-sort="persona.pNombres">PERSONA</th>
+                        <th st-sort="ppConfirmado">ESTADO</th>
+                    </tr> 
+                </thead>
+            
+                <tbody >
+                    <tr ng-repeat="item in $ctrl.listPedidos track by $index">   
+                        <td> {{item.ppFechaCreacion | date : "dd-MM-yyyy" }} </td>  
+                        <td> {{item.ppCantidad}}</td>
+                        <td> {{item.persona.pNombres}}</td>
+                        <td> 
+                            
+                            <i class="bi bi-bookmark-check-fill" ng-if="item.ppConfirmado == 1"></i>
+                            <i class="bi bi-bookmark-dash" ng-if="item.ppConfirmado == 0"></i>
+
+                           </td>
+                    </tr>
+                </tbody>    
+                <tfoot ng-if="$ctrl.foo">
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
+                        </td>
+                    </tr>
+                </tfoot>     
+            
+            </table>
+
+            </div>
+
+
+
+

@@ -1,0 +1,31 @@
+<div class="table-responsive">
+    <table  conditional="$ctrl.foo"  class="table table-dark table-striped" st-safe-src="vm.listRecargasSafe" st-table="vm.listRecargas">
+    <thead >
+        <tr>
+            <th st-sort="fechaTransation" ><i class="bi bi-bar-chart-steps"></i>FECHA</th>
+            <th st-sort="operador.value"><i class="bi bi-bar-chart-steps"></i>OPERADOR</th>
+            <th st-sort="valor"><i class="bi bi-bar-chart-steps"></i>VALOR</th>
+           
+        </tr> 
+    </thead>
+
+    <tbody >
+        <tr ng-repeat="item in vm.listRecargas track by $index">   
+            <td> {{item.fechaTransation | date : "dd-MM-yyyy" }} </td>  
+            <td> {{item.operador.value}}</td>
+            <td> {{item.valor}}</td>
+ 
+        </tr>
+    </tbody>    
+    <tfoot ng-if="vm.foo">
+        <tr>
+            <td colspan="5" class="text-center">
+                <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
+            </td>
+        </tr>
+    </tfoot>     
+
+</table>
+
+</div>
+
