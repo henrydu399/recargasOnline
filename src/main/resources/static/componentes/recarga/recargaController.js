@@ -14,7 +14,8 @@
          vm.register= register;
          vm.model = {
             user : 'USER001',
-            concepto: 'RECARGA DE MOVIL'
+            concepto: 'RECARGA DE MOVIL',
+			fecha: new Date()
 
          };
 

@@ -1,79 +1,110 @@
 
 
-<div  class="container" >
+<div class="container">
+
+	<div class="titulo" style="margin-top: 20px; text-align: center;">
+
+		<h2>RECARGAR MOVIL</h2>
+		<br>
+
+	</div>
+
+	<div class="row align-items-center">
+		<div class="col">
+			<form ng-submit="vm.register()">
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon1">NUMERO
+						MOVIL</span> <input type="number" class="form-control" placeholder="#"
+						ng-model="vm.model.movil" aria-label="Username"
+						aria-describedby="basic-addon1" required>
+				</div>
+
+
+				<div class="row">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1">NUMERO
+							IDENTIFICACION PERSONA</span> <input type="text" class="form-control"
+							ng-model="vm.model.numeroIdentificacion" aria-label="Username"
+							aria-describedby="basic-addon1" required>
+					</div>
+				</div>
 
 
 
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon1">OPERADOR</span> <select
+						name="operador" id="operador" ng-model="vm.model.operador.value"
+						required>
+						<option value="TIGO">TIGO</option>
+						<option value="MOVISTAR">MOVISTAR</option>
+						<option value="CLARO">CLARO</option>
+						<option value="UFF">UFF</option>
+					</select>
+					<span class="input-group-text" id="basic-addon1">FECHA </span>
+					<input class="form-control" type="date"  ng-model="vm.model.fecha" disabled>
+				</div>
+				
+	
 
-    <div class="titulo" style="margin-top: 20px;">
-      
-        <h2>RECARGAR MOVIL</h2> 
-       
-    </div>
-
-
- 
-    
-    <form   ng-submit="vm.register()">
-
-
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">NUMERO MOVIL</span>
-        <input type="number" class="form-control" placeholder="301555544" ng-model="vm.model.movil" aria-label="Username" aria-describedby="basic-addon1" required>
-      </div>
-  
-
-      <div class="row">
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">NUMERO IDENTIFICACION PERSONA</span>
-        <input type="text" class="form-control"  ng-model="vm.model.numeroIdentificacion" aria-label="Username" aria-describedby="basic-addon1" required >
-      </div>
-      </div>
-
+				<div class="row">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1">VALOR</span> <span
+							class="input-group-text" id="basic-addon1">{{vm.model.valor
+							| currency }}</span> <input type="number" class="form-control"
+							ng-model="vm.model.valor" aria-label="Username"
+							aria-describedby="basic-addon1" required>
+					</div>
+				</div>
 
 
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">OPERADOR</span>
-        <select name="operador" id="operador"  ng-model="vm.model.operador.value" required>
-          <option value="TIGO">TIGO</option>
-          <option value="MOVISTAR">MOVISTAR</option>
-          <option value="CLARO">CLARO</option>
-          <option value="UFF">UFF</option>
-        </select>
-      </div>
-
-      <div class="row">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">VALOR</span>
-          <span class="input-group-text" id="basic-addon1">{{vm.model.valor | currency }}</span>
-          <input type="number" class="form-control"  ng-model="vm.model.valor" aria-label="Username" aria-describedby="basic-addon1" required >
-        </div>
-      </div>
+				<div class="row">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1">CONCEPTO</span> <input
+							type="text" class="form-control" ng-model="vm.model.concepto"
+							value="RECARGA DE MOVIL" aria-label="Username"
+							aria-describedby="basic-addon1" disabled>
+					</div>
+				</div>
 
 
-      <div class="row">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">CONCEPTO</span>
-          <input type="text" class="form-control"  ng-model="vm.model.concepto" value="RECARGA DE MOVIL" aria-label="Username" aria-describedby="basic-addon1" disabled >
-        </div>
-        </div>
+				<div class="row">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1">USER</span> <input
+							type="text" class="form-control" ng-model="vm.model.user"
+							value="USER001" aria-label="Username"
+							aria-describedby="basic-addon1" disabled>
+					</div>
+				</div>
 
 
-        <div class="row">
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">USER</span>
-            <input type="text" class="form-control"  ng-model="vm.model.user" value="USER001" aria-label="Username" aria-describedby="basic-addon1" disabled >
-          </div>
-          </div>
-    
+
+				<br>
+				<div class="row">
+					<div class="col"></div>
+
+					<div class="col">
+						<button type="submit" class="btn btn-secondary">RECARGAR</button>
+					</div>
+
+					<div class="col"></div>
+
+				</div>
 
 
-<br>
-  <div class="row">
-    <button type="submit" class="btn btn-secondary">RECARGAR</button>
-  </div>
-       
-      </form>
+			</form>
+
+
+		</div>
+
+		<div class="col"></div>
+	
+
+
+
+	</div>
+
+
+
 
 </div>
 

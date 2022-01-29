@@ -2,9 +2,9 @@
     <table  conditional="$ctrl.foo"  class="table table-dark table-striped" st-safe-src="vm.listRecargasSafe" st-table="vm.listRecargas">
     <thead >
         <tr>
-            <th st-sort="fechaTransation" ><i class="bi bi-bar-chart-steps"></i>FECHA</th>
-            <th st-sort="operador.value"><i class="bi bi-bar-chart-steps"></i>OPERADOR</th>
-            <th st-sort="valor"><i class="bi bi-bar-chart-steps"></i>VALOR</th>
+            <th st-sort="fechaTransation" ><i class="fas fa-calendar-alt"></i>FECHA</th>
+            <th st-sort="operador.value"><i class="fas fa-mobile-alt"></i>OPERADOR</th>
+            <th st-sort="valor"><i class="fas fa-dollar-sign"></i>VALOR</th>
            
         </tr> 
     </thead>
@@ -13,13 +13,13 @@
         <tr ng-repeat="item in vm.listRecargas track by $index">   
             <td> {{item.fechaTransation | date : "dd-MM-yyyy" }} </td>  
             <td> {{item.operador.value}}</td>
-            <td> {{item.valor}}</td>
+            <td> {{item.valor | currency  }}</td>
  
         </tr>
     </tbody>    
-    <tfoot ng-if="vm.foo">
+    <tfoot >
         <tr>
-            <td colspan="5" class="text-center">
+            <td colspan="3" class="text-center"> 
                 <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
             </td>
         </tr>

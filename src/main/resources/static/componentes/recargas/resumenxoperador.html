@@ -3,9 +3,9 @@
     <thead >
         <tr>
 
-            <th st-sort="operador"><i class="bi bi-bar-chart-steps"></i>OPERADOR</th>
-            <th st-sort="cantidad"><i class="bi bi-bar-chart-steps"></i>CANTIDAD RECARGAS</th>
-            <th st-sort="total"><i class="bi bi-bar-chart-steps"></i>TOTAL</th>
+            <th st-sort="operador"><i class="fas fa-mobile-alt"> </i>OPERADOR</th>
+            <th st-sort="cantidad"><i class="fas fa-list-ol"></i>CANTIDAD RECARGAS</th>
+            <th st-sort="total"><i class="fas fa-dollar-sign"></i>TOTAL</th>
         </tr> 
     </thead>
 
@@ -14,7 +14,7 @@
 
             <td> {{item.operador}}</td>
             <td> {{item.cantidad}}</td>
-            <td> {{item.total}}</td>
+            <td> {{item.total | currency }}</td>
 
         </tr>
     </tbody>    
